@@ -3,47 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/base.css">
     <title>Wander Viajes y Turismo</title>
 </head>
 <body>
        
-    <header>
+    <header class="encabezado">
         <a href="index.html">
-            <img src="resources/logo.jpg" alt="logotipo Wander">
+            <img src="resources/logo.png" alt="logotipo Wander">
+            <h1>Wander Viajes y Turismo</h1>
         </a>
-        <h1>Wander Viajes y Turismo</h1>
         <nav>
-            <a href="index.html">Inicio</a>
+            <a href="index.html"> Inicio </a>
             <a href="#destinos">Destinos</a>
             <a href="#servicios">Servicios</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
-    <main>
+    <main >
         <!-- Inicio -->
-        <section >
-            <h2>¡En Wander , tu viaje
-                comienza aquí!</h2>
-            <video src="resources/inicio.mp4" autoplay loop muted>
-
-            </video>
-            <a href="destinos">
-                <img src="resources/desplazarse-hacia-abajo.png" alt="botón deslizar">
-            </a>
+        <section id="inicio" class="video-container">
+            <video src="resources/inicio.mp4" autoplay loop muted class="background-video"></video>
+            <div class="overlay">
+                <h2>¡En Wander, tu viaje comienza aquí!</h2>
+                <a href="destinos">
+                    <img src="resources/desplazarse-hacia-abajo.png" alt="botón deslizar" class="overlay-image">
+                </a>
+            </div>
         </section>
+
+
+
 
         <!-- Destinos -->
         <section id="destinos">
             <h3>DESTINOS</h3>
-            <div>
+            <div class="destinosejemplos">
                 <a href="asia.html">
                     <h4>Asia</h4>
                     <img src="resources/asia.jpg" alt="">
                 </a>
                 <a href="europa.html">
                     <h4>Europa</h4>
-                    <img src="resources/europa.avif" alt="">
+                    <img src="resources/europa.jpg" alt="">
                 </a>
                 <a href="caribe.html">
                     <h4>Centroamérica y el Caribe</h4>
@@ -51,14 +54,14 @@
                 </a>
                 <a href="norteamerica.html">
                     <h4>NorteAmérica</h4>
-                    <img src="resources/norteamerica.avif" alt="">
+                    <img src="resources/norteamerica.webp" alt="">
                 </a>
                 <a href="sudamerica.html">
                     <h4>Sudamerica</h4>
-                    <img src="resources/sudamerica.avif" alt="">
+                    <img src="resources/sudamerica.webp" alt="">
                 </a>
             </div>
-            <div style="background-color: aqua;">
+            <div class="servicios">
                 <div >
                     <img src="resources/vuelos.png" alt="imagen avion" >
                 </div>
@@ -78,12 +81,15 @@
             
         </section>
 
+
+
+
         <!-- Servicios -->
-        <section id="servicios">
+        <section id="serviciosejemplos">
             <h3>Servicios turisticos</h3>
 
             <div>
-                <img src="resources/Paquetes_de_Viajes.png" alt="imagen de muestra de paquetes turisticos">
+                <img src="resources/Paquetes_de_Viajes.webp" alt="imagen de muestra de paquetes turisticos">
                 <p>Paquetes de Viaje Personalizados:
                 Diseñamos itinerarios a medida
                 basados en tus intereses y
@@ -92,7 +98,7 @@
             </div>
 
             <div>
-                <img src="resources/reservas_de_alojamiento.png" alt="imagen de una habitacion de hotel">
+                <img src="resources/reservas_de_alojamiento.webp" alt="imagen de una habitacion de hotel">
                 <p>Reservas de Alojamiento y
                 Transporte: Coordinamos todas tus
                 necesidades de alojamiento y
@@ -102,7 +108,7 @@
             </div>
 
             <div>
-                <img src="resources/Experiencias_exclusivas.png" alt="imagen de una comida gourmet">
+                <img src="resources/Experiencias_exclusivas.webp" alt="imagen de una comida gourmet">
                 <p>Experiencias Exclusivas: Ofrecemos
                 acceso a experiencias únicas que
                 no encontrarás en ningún otro lugar,
@@ -112,7 +118,7 @@
             </div>
 
             <div>
-                <img src="resources/Asesoramiento_de_viaje.png"  alt="imagen de asesoramiento a un cliente">
+                <img src="resources/Asesoramiento_de_viaje.jpg"  alt="imagen de asesoramiento a un cliente">
                 <p>Asesoramiento de Viaje Experto:
                     Nuestros agentes de viajes están
                     disponibles para ofrecerte
@@ -150,11 +156,11 @@
     <footer>
         
         <div>
-            <img src="resources/footer.jpg" alt="imagen amigos viajando">
+            <img src="resources/footer.webp" alt="imagen amigos viajando">
         </div>
 
         <div>
-            <img src="resources/logo.jpg" alt="logotipo Wander">
+            <img src="resources/logo.png" alt="logotipo Wander">
         <h5>Wander Viajes y Turismo</h5>
         <p>"¡Embárcate en la aventura de tu vida con nosotros!
             Deja que nuestra experiencia transforme tus sueños
