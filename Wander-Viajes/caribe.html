@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="CSS/base.css">
     <title>Wander Viajes y Turismo</title>
 </head>
-<body>
+<body class="bodyDestinos">
     
     
     <header class="encabezado">
@@ -22,68 +22,24 @@
         
         <nav>
             <a href="index.html"> Inicio </a>
-            <a href="#destinos">Destinos</a>
-            <a href="#serviciosejemplos">Servicios</a>
-            <a href="#contenedor">Contacto</a>
+            <a href="index.html#destinos">Destinos</a>
+            <a href="index.html#serviciosejemplos">Servicios</a>
+            <a href="index.html#contenedor">Contacto</a>
         </nav>
     </header>
 
     <main>
         <h4 class="h4lugar">CARIBE</h4>
+        <div class="filter-container">
+            <label for="filterName">Buscar por nombre:</label>
+            <input type="text" id="filterName" placeholder="Ingrese el nombre del destino...">
+    
+            <label for="filterPrice">Filtrar por precio máximo:</label>
+            <input type="range" name="filterPrice" id="filterPrice"min="0" max="5000" value="5000" step="100">
+            <div id="selectedPrice"></div>
+        </div>
         <section class="destinos">
-        <!-- Card 1 -->
-        <div class="card">
-            <img src="https://via.placeholder.com/300x300" alt="Playa Tropical">
-            <h2>Escapada a Playa Tropical</h2>
-            <p>Disfruta de 7 días en una paradisíaca playa de arena blanca, con todo incluido. Relájate bajo el sol y sumérgete en aguas cristalinas.</p>
-            <div class="price">$1,499.99</div>
-            <button>Reservar ahora</button>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="card">
-            <img src="https://via.placeholder.com/300x300" alt="Aventura en Montañas">
-            <h2>Aventura en las Montañas</h2>
-            <p>Explora las alturas durante 5 días de trekking y aventura en las montañas. Incluye guías expertos y alojamiento en cabañas rústicas.</p>
-            <div class="price">$899.99</div>
-            <button>Reservar ahora</button>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="card">
-            <img src="https://via.placeholder.com/300x300" alt="Safari Africano">
-            <h2>Safari en África</h2>
-            <p>Vive la experiencia de un safari en África durante 10 días. Descubre la fauna salvaje y alójate en exclusivos campamentos de lujo.</p>
-            <div class="price">$3,200.00</div>
-            <button>Reservar ahora</button>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="card">
-            <img src="https://via.placeholder.com/300x300" alt="Viaje a Europa">
-            <h2>Tour por las Capitales Europeas</h2>
-            <p>Un recorrido de 15 días por las ciudades más emblemáticas de Europa: París, Roma, Madrid y Ámsterdam. Incluye vuelos y hoteles 4 estrellas.</p>
-            <div class="price">$2,800.00</div>
-            <button>Reservar ahora</button>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="card">
-            <img src="https://via.placeholder.com/300x300" alt="Descanso en las Islas Maldivas">
-            <h2>Descanso en las Maldivas</h2>
-            <p>Pasa una semana en un bungalow sobre el agua en las islas Maldivas. Relájate con tratamientos de spa y cenas a la luz de las velas.</p>
-            <div class="price">$4,500.00</div>
-            <button>Reservar ahora</button>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="card">
-            <img src="https://via.placeholder.com/300x300" alt="Crucero por el Caribe">
-            <h2>Crucero por el Caribe</h2>
-            <p>Disfruta de un crucero todo incluido por las islas del Caribe durante 10 días. Diversión a bordo y paisajes inolvidables.</p>
-            <div class="price">$2,100.00</div>
-            <button>Reservar ahora</button>
-        </div>
+        
     </section>
     </main>
 
@@ -120,6 +76,6 @@
     </footer>
 
 
-
+    <script src="js/index.js"></script>
 </body>
 </html>

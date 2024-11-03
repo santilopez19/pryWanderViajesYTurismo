@@ -54,7 +54,6 @@ html, body {
 }
 
 
-
 /* ENCABEZADO */
 
 
@@ -88,6 +87,7 @@ html, body {
 .encabezado nav {
     display: flex;
     gap: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .encabezado nav a {
@@ -185,6 +185,16 @@ html, body {
     border-radius: 0%;
 }
 
+.filter-container {
+    margin: 20px;
+    max-width: 250px;
+
+}
+
+.filter-container label {
+    display: block;
+    margin-top: 10px;
+}
 
 
 /*SERVICIOS EJEMPLOS*/
@@ -472,18 +482,32 @@ section.destinos {
 
 
 
+
 @media (max-width: 767px) {
+    
+.bodyDestinos{
+    background-color: #83c5bf95;
+}
     .encabezado {
         flex-direction: column;
         height: auto;
     }
 
     .encabezado nav {
+        display: none;
         flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
+        background-color: #006D77; 
+        position: absolute;
+        top: 100px; 
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 0 0 10px 10px;
     }
-
+    .encabezado nav.show {
+        display: flex;
+    }
     .encabezado a h1 {
         font-size: 1.5em;
     }
@@ -491,6 +515,7 @@ section.destinos {
     .encabezado nav a {
         font-size: 18px;
         padding: 10px 15px;
+        background-color: #ffffff17;
     }
     
     .overlay h2 {
@@ -514,7 +539,8 @@ section.destinos {
         width: 100%;
         height: auto;
     }
-
+    
+    
     .servicios {
         flex-direction: column;
         height: auto;
@@ -591,9 +617,11 @@ section.destinos {
         padding: 20px;
     }
 
-    /* Mostrar el ícono de hamburguesa */
     .hamburguesa {
-        display: block;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 2em;
+        color: white;
     }
 
     nav a {
@@ -601,6 +629,9 @@ section.destinos {
         border-bottom: 1px solid white;
         text-align: left;
         font-size: 1.5rem;
+    }
+    .h4lugar{
+        font-size: 2em;
     }
 }
 
@@ -647,5 +678,15 @@ section.destinos {
     footer a img {
         width: 25px;
         height: 25px;
+    }
+    /* Esconder el menú de navegación por defecto en pantallas pequeñas */
+    nav {
+        display: none;
+    }
+
+    /* Mostrar el menú cuando se active la clase 'show' */
+    nav.show {
+        display: flex;
+        flex-direction: column;
     }
 }
