@@ -3,13 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.bodyDestinos{
+    background-color: #d6f3f5;
+    
+}
 html, body {
     height: 100%;
     overflow-x: hidden;
     font-family: 'Nunito', sans-serif; /* Asegura que la fuente se aplique */
 }
-
+.containerCenter{
+display: flex;
+flex-direction: column;
+}
 /*INICIO*/
 .video-container {
     position: relative;
@@ -28,6 +34,17 @@ html, body {
     height: auto;
     transform: translate(-50%, -50%);
     z-index: 1;
+}
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+h4 {
+    font-size: 2.4em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
 }
 
 .overlay {
@@ -53,6 +70,10 @@ html, body {
     margin-top: 120px; 
 }
 
+nav {
+    display: flex;
+    gap: 20px;
+}
 
 /* ENCABEZADO */
 
@@ -186,14 +207,33 @@ html, body {
 }
 
 .filter-container {
+    display: flex;
+    flex-direction: row; /* Asegúrate de que estén en fila */
+    align-items: center; /* Alineación vertical centrada */
+    justify-content: space-between; /* Espacio uniforme entre elementos */
     margin: 20px;
-    max-width: 250px;
+    max-width: 1400px; /* Mantén un ancho máximo para el contenedor */
+    gap: 20px; /* Espaciado entre elementos */
+}
 
+.filter-container > * {
+    flex: none; /* Evita que los elementos se expandan automáticamente */
+    max-width: 200px; /* Establece un ancho máximo para cada elemento */
+}
+
+/* Ajusta los elementos específicos según sea necesario */
+.filter-container input {
+    width: 100%; /* Permite que el input llene su contenedor */
+    max-width: 300px; /* Limita el tamaño máximo del input */
 }
 
 .filter-container label {
-    display: block;
-    margin-top: 10px;
+    width: auto; /* Asegúrate de que el texto no se expanda demasiado */
+}
+
+.filter-container .slider-container {
+    max-width: 400px; /* Limita el ancho del slider */
+    flex-grow: 1; /* Permite que ocupe más espacio si es necesario */
 }
 
 
@@ -277,17 +317,6 @@ html, body {
     backdrop-filter: blur(10px);
 }
 
-fieldset {
-    border: none;
-    padding: 0;
-}
-
-h4 {
-    font-size: 2.4em;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #ffffff;
-}
 
 input, textarea {
     width: 100%;
@@ -405,10 +434,6 @@ footer a {
 }
 
 /* Ocultar el menú en pantallas pequeñas por defecto */
-nav {
-    display: flex;
-    gap: 20px;
-}
 
 
 
@@ -423,7 +448,11 @@ section.destinos {
     gap: 20px;
     padding: 20px;
 }
-
+.filter-container{
+    padding: 10px;
+    background-color: #00000035;
+    border-radius: 5px;
+}
 .card {
     background-color: white;
     border-radius: 8px;
@@ -484,10 +513,18 @@ section.destinos {
 
 
 @media (max-width: 767px) {
+    .filter-container {
+        flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+        align-items: stretch; /* Asegúrate de que los elementos llenen el ancho */
+    }
+
+    .filter-container > * {
+        max-width: 100%; /* Permite que ocupen todo el ancho */
+    }
     
-.bodyDestinos{
-    background-color: #83c5bf95;
-}
+    .bodyDestinos{
+        background-color: #83c5bf95;
+    }
     .encabezado {
         flex-direction: column;
         height: auto;
