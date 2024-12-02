@@ -26,7 +26,7 @@ export function manejadorFiltro() {
 
     contenedor.innerHTML = contenidoHTMLFiltrado;
 }
-
+/////
 export function FiltrarPrecios() {
     const campoPrecio = document.getElementById('filterPrice');
     const precioMaximo = parseInt(campoPrecio.value, 10);
