@@ -1,12 +1,10 @@
 // Archivo filtros.js
-import { tienda } from './tienda.js';
-
 const contenedor = document.querySelector(".destinos");
 const mostrarPrecio = document.getElementById('selectedPrice');
 
-export function manejadorFiltro() {
+export function manejadorFiltro(data) {
     const campoTexto = document.getElementById('filterName').value.toLowerCase();
-    const destinosFiltrados = tienda.destinos.filter((destino) => {
+    const destinosFiltrados = data.destinos.filter((destino) => {
         const nombreMinusculas = destino.nombre.toLowerCase();
         return nombreMinusculas.includes(campoTexto);
     });
@@ -26,13 +24,13 @@ export function manejadorFiltro() {
 
     contenedor.innerHTML = contenidoHTMLFiltrado;
 }
-/////
-export function FiltrarPrecios() {
+
+export function FiltrarPrecios(data) {
     const campoPrecio = document.getElementById('filterPrice');
     const precioMaximo = parseInt(campoPrecio.value, 10);
     const campoTexto = document.getElementById('filterName').value.toLowerCase();
 
-    const destinosFiltrados = tienda.destinos.filter((destino) => {
+    const destinosFiltrados = data.destinos.filter((destino) => {
         const nombreMinusculas = destino.nombre.toLowerCase();
         return nombreMinusculas.includes(campoTexto) && destino.precio <= precioMaximo;
     });
