@@ -25,7 +25,7 @@ export function RenderizarDestinos(data) {
             <h2>${destino.nombre}</h2>
             <p>${destino.descripcion}</p>
             <div class="price">$${destino.precio}</div>
-            <button id="${destino.id}">Reservar ahora</button>
+            <a href="https://walink.co/249612"><button id="${destino.id}">Reservar ahora</button></a>
         </div>
         `;
     });
